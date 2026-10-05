@@ -1,0 +1,1349 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kolluru Navatej | Computer Science Engineer</title>
+
+<meta name="description"
+content="Kolluru Navatej - Computer Science Engineering student, developer and technology enthusiast from Vizianagaram, Andhra Pradesh.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #2563eb;
+    --secondary: #7c3aed;
+    --dark: #0f172a;
+    --text: #334155;
+    --light: #f8fafc;
+    --white: #ffffff;
+    --border: #e2e8f0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* NAVBAR */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 25px 70px;
+    background:
+        radial-gradient(circle at top right, #dbeafe, transparent 35%),
+        radial-gradient(circle at bottom left, #ede9fe, transparent 35%),
+        var(--white);
+}
+
+.hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #eff6ff;
+    color: var(--primary);
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero h2 {
+    font-size: 24px;
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37,99,235,0.25);
+}
+
+.btn-outline {
+    border: 2px solid var(--border);
+    color: var(--dark);
+    background: white;
+}
+
+.btn-outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* HERO CARD */
+
+.hero-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow: 0 20px 50px rgba(15,23,42,0.08);
+}
+
+.hero-card-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.hero-card h3 {
+    font-size: 24px;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.hero-card p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 90px 25px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    color: var(--dark);
+    margin-top: 8px;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(15,23,42,0.04);
+}
+
+.card h3 {
+    color: var(--dark);
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card p {
+    margin-bottom: 12px;
+}
+
+/* EDUCATION */
+
+.education {
+    background: #f1f5f9;
+}
+
+.education-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.education-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid var(--primary);
+    box-shadow: 0 6px 20px rgba(15,23,42,0.05);
+}
+
+.education-card h3 {
+    color: var(--dark);
+}
+
+.education-card .year {
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* SKILLS */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.skill-card h3 {
+    color: var(--dark);
+    margin-bottom: 18px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    padding: 8px 13px;
+    background: #f1f5f9;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* CERTIFICATIONS */
+
+.certifications {
+    background: #f8fafc;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.cert-card {
+    padding: 25px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.cert-icon {
+    min-width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background: #eff6ff;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.cert-card h3 {
+    color: var(--dark);
+    font-size: 17px;
+}
+
+.cert-card p {
+    font-size: 14px;
+}
+
+/* PROJECTS */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 40px rgba(15,23,42,0.1);
+}
+
+.project-number {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.project-card h3 {
+    color: var(--dark);
+    margin: 12px 0;
+    font-size: 21px;
+}
+
+.project-card p {
+    font-size: 15px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 20px;
+}
+
+.project-tech span {
+    background: #eff6ff;
+    color: var(--primary);
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* EXPERIENCE */
+
+.experience {
+    background: #f1f5f9;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.experience-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+.experience-card h3 {
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.experience-card .role {
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* RESUME */
+
+.resume-section {
+    text-align: center;
+}
+
+.resume-box {
+    max-width: 850px;
+    margin: auto;
+    background: linear-gradient(135deg, #eff6ff, #f5f3ff);
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.resume-box h2 {
+    color: var(--dark);
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.resume-box p {
+    margin-bottom: 25px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: var(--dark);
+    color: #cbd5e1;
+}
+
+.contact .section-title h2 {
+    color: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-card {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #334155;
+    border-radius: 15px;
+}
+
+.contact-card h3 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.contact-card a {
+    color: #93c5fd;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+/* FOOTER */
+
+footer {
+    background: #020617;
+    color: #94a3b8;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+/* MOBILE */
+
+@media(max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-container,
+    .about-grid,
+    .skills-grid,
+    .cert-grid,
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: 120px;
+    }
+
+    .hero-card {
+        max-width: 500px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+<div class="nav-container">
+
+<div class="logo">
+Navatej<span>.</span>
+</div>
+
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#certifications">Certifications</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-container">
+
+<div>
+
+<div class="badge">
+Computer Science Engineering Student
+</div>
+
+<h1>
+Hi, I'm <span>Kolluru Navatej</span>
+</h1>
+
+<h2>
+Developer • Problem Solver • Technology Enthusiast
+</h2>
+
+<p>
+I'm a third-year Computer Science Engineering student passionate about
+building practical software solutions using web technologies,
+Android development, cloud computing, databases and AI.
+</p>
+
+<div class="buttons">
+
+<a href="#projects" class="btn btn-primary">
+View My Projects
+</a>
+
+<a href="#contact" class="btn btn-outline">
+Contact Me
+</a>
+
+<a href="https://linkedin.com/in/navatejkolluru"
+target="_blank"
+class="btn btn-outline">
+LinkedIn
+</a>
+
+<a href="https://github.com/navatejkolluru-spec"
+target="_blank"
+class="btn btn-outline">
+GitHub
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="hero-card-icon">
+KN
+</div>
+
+<h3>Kolluru Navatej</h3>
+
+<p>
+B.Tech Computer Science & Engineering
+</p>
+
+<p>
+📍 Vizianagaram, Andhra Pradesh
+</p>
+
+<p>
+Focused on software development, databases,
+cloud technologies, networking and AI.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<span>About Me</span>
+<h2>Who I Am</h2>
+</div>
+
+<div class="about-grid">
+
+<div class="card">
+
+<h3>My Journey</h3>
+
+<p>
+Hi, I'm Navatej! I'm a third-year Computer Science Engineering
+student who genuinely loves building software that solves
+real-world problems.
+</p>
+
+<p>
+My journey in technology started with curiosity about how
+networks and databases work behind the scenes. That curiosity
+grew into hands-on experience with Android development,
+cloud fundamentals and AI-driven applications.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>What I Enjoy</h3>
+
+<p>
+I enjoy the complete development lifecycle — from designing
+architecture and database schemas to implementing clean and
+functional code.
+</p>
+
+<p>
+I'm an adaptable learner who enjoys new challenges,
+collaboration and projects that create meaningful impact.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section class="education" id="education">
+
+<div class="container">
+
+<div class="section-title">
+<span>Education</span>
+<h2>Academic Background</h2>
+</div>
+
+<div class="education-grid">
+
+<div class="education-card">
+
+<div class="year">Currently Pursuing</div>
+
+<h3>B.Tech — Computer Science & Engineering</h3>
+
+<p>
+Lendi Institute of Engineering and Technology
+</p>
+
+<p>
+<strong>Status:</strong> 3rd Year — Ongoing
+</p>
+
+</div>
+
+
+<div class="education-card">
+
+<div class="year">Intermediate</div>
+
+<h3>Intermediate (10+2)</h3>
+
+<p>
+State Board
+</p>
+
+<p>
+<strong>Percentage:</strong> 86.1%
+</p>
+
+</div>
+
+
+<div class="education-card">
+
+<div class="year">Secondary Education</div>
+
+<h3>10th Standard — SSC</h3>
+
+<p>
+State Board
+</p>
+
+<p>
+<strong>Percentage:</strong> 85.0%
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<div class="container">
+
+<div class="section-title">
+<span>Technical Skills</span>
+<h2>My Technology Stack</h2>
+</div>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+
+<h3>Programming Languages</h3>
+
+<div class="skill-list">
+
+<span class="skill">C</span>
+<span class="skill">Java</span>
+<span class="skill">Python</span>
+<span class="skill">JavaScript</span>
+<span class="skill">Kotlin</span>
+
+</div>
+
+</div>
+
+
+<div class="skill-card">
+
+<h3>Web & App Development</h3>
+
+<div class="skill-list">
+
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">Android Studio</span>
+<span class="skill">Android Development</span>
+
+</div>
+
+</div>
+
+
+<div class="skill-card">
+
+<h3>Databases</h3>
+
+<div class="skill-list">
+
+<span class="skill">SQL</span>
+<span class="skill">DBMS</span>
+<span class="skill">MongoDB</span>
+
+</div>
+
+</div>
+
+
+<div class="skill-card">
+
+<h3>Cloud & Networking</h3>
+
+<div class="skill-list">
+
+<span class="skill">AWS</span>
+<span class="skill">Cisco Networking</span>
+<span class="skill">Cisco Packet Tracer</span>
+
+</div>
+
+</div>
+
+
+<div class="skill-card">
+
+<h3>Core Computer Science</h3>
+
+<div class="skill-list">
+
+<span class="skill">Operating Systems</span>
+<span class="skill">Theory of Computation</span>
+<span class="skill">Software Architecture</span>
+<span class="skill">UML</span>
+
+</div>
+
+</div>
+
+
+<div class="skill-card">
+
+<h3>Development Interests</h3>
+
+<div class="skill-list">
+
+<span class="skill">Full Stack Development</span>
+<span class="skill">AI Applications</span>
+<span class="skill">Cloud Computing</span>
+<span class="skill">Database Systems</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CERTIFICATIONS -->
+
+<section class="certifications" id="certifications">
+
+<div class="container">
+
+<div class="section-title">
+<span>Certifications & Training</span>
+<h2>Learning & Achievements</h2>
+</div>
+
+<div class="cert-grid">
+
+<div class="cert-card">
+
+<div class="cert-icon">01</div>
+
+<div>
+
+<h3>Google Android Developer Virtual Internship</h3>
+
+<p>
+AICTE & EduSkills Foundation
+</p>
+
+</div>
+
+</div>
+
+
+<div class="cert-card">
+
+<div class="cert-icon">02</div>
+
+<div>
+
+<h3>AWS Cloud Training / Certification</h3>
+
+<p>
+Cloud Computing Fundamentals
+</p>
+
+</div>
+
+</div>
+
+
+<div class="cert-card">
+
+<div class="cert-icon">03</div>
+
+<div>
+
+<h3>Cisco Networking Training</h3>
+
+<p>
+Network Infrastructure & Networking Fundamentals
+</p>
+
+</div>
+
+</div>
+
+
+<div class="cert-card">
+
+<div class="cert-icon">04</div>
+
+<div>
+
+<h3>The Joy of Computing using Python</h3>
+
+<p>
+NPTEL — 12 Week Course, 4 Credits
+</p>
+
+</div>
+
+</div>
+
+
+<div class="cert-card">
+
+<div class="cert-icon">05</div>
+
+<div>
+
+<h3>Introduction to Modern AI</h3>
+
+<p>
+Artificial Intelligence Fundamentals
+</p>
+
+</div>
+
+</div>
+
+
+<div class="cert-card">
+
+<div class="cert-icon">06</div>
+
+<div>
+
+<h3>Cybersecurity Fundamentals</h3>
+
+<p>
+Cybersecurity & Security Fundamentals
+</p>
+
+</div>
+
+</div>
+
+
+<div class="cert-card">
+
+<div class="cert-icon">★</div>
+
+<div>
+
+<h3>Additional Honor</h3>
+
+<p>
+Recognized by Lendi Institute for outstanding performance
+in the NPTEL SWAYAM session.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Academic Projects</span>
+
+<h2>Things I've Built</h2>
+
+</div>
+
+
+<div class="project-grid">
+
+
+<div class="project-card">
+
+<div class="project-number">
+01 — NETWORKING & AI
+</div>
+
+<h3>NetSage AI</h3>
+
+<p>
+A network troubleshooting system focused on designing
+complex network topologies and verification workflows
+using Cisco Packet Tracer.
+</p>
+
+<p>
+The project also includes comprehensive documentation
+and step-by-step video demonstration scripts.
+</p>
+
+<div class="project-tech">
+
+<span>Cisco Packet Tracer</span>
+<span>Networking</span>
+<span>AI</span>
+<span>Troubleshooting</span>
+
+</div>
+
+</div>
+
+
+<div class="project-card">
+
+<div class="project-number">
+02 — DIGITAL SECURITY
+</div>
+
+<h3>E-Loktantra</h3>
+
+<p>
+An AI-driven online voting system designed to improve
+electoral security, accessibility and the digital voting
+experience.
+</p>
+
+<div class="project-tech">
+
+<span>AI</span>
+<span>Web Development</span>
+<span>Security</span>
+<span>Voting System</span>
+
+</div>
+
+</div>
+
+
+<div class="project-card">
+
+<div class="project-number">
+03 — SOFTWARE ARCHITECTURE
+</div>
+
+<h3>Smart File & Recovery Management System</h3>
+
+<p>
+A software architecture project focused on file tracking
+and automated data recovery modules.
+</p>
+
+<p>
+Designed detailed use case, activity, sequence and
+state diagrams for the system.
+</p>
+
+<div class="project-tech">
+
+<span>UML</span>
+<span>Software Architecture</span>
+<span>Recovery</span>
+<span>System Design</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section class="experience" id="experience">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Leadership & Experience</span>
+
+<h2>Beyond Coding</h2>
+
+</div>
+
+
+<div class="experience-grid">
+
+<div class="experience-card">
+
+<h3>Event Coordinator</h3>
+
+<div class="role">
+Leadership & Team Management
+</div>
+
+<p>
+Organized and led team initiatives during the college
+department festival. Managed event logistics, coordinated
+team members and ensured smooth execution of activities.
+</p>
+
+</div>
+
+
+<div class="experience-card">
+
+<h3>Technical Presentation</h3>
+
+<div class="role">
+Communication & Technical Storytelling
+</div>
+
+<p>
+Scripted and presented Personal Information Questionnaire
+(PIQ) video content covering technical interests,
+Database Management Systems and personal leadership
+philosophies.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RESUME -->
+
+<section class="resume-section" id="resume">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Resume</span>
+
+<h2>My Professional Profile</h2>
+
+</div>
+
+<div class="resume-box">
+
+<h2>Interested in working together?</h2>
+
+<p>
+Explore my skills, projects, education and technical
+experience through my professional resume.
+</p>
+
+<!--
+IMPORTANT:
+Upload your resume PDF to the same GitHub repository
+and rename it to:
+
+resume.pdf
+
+Then this button will open it.
+-->
+
+<a href="resume.pdf"
+target="_blank"
+class="btn btn-primary">
+
+View / Download Resume
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Get In Touch</span>
+
+<h2>Let's Connect</h2>
+
+</div>
+
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3>Location</h3>
+
+<p>
+Vizianagaram, Andhra Pradesh
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>LinkedIn</h3>
+
+<a href="https://linkedin.com/in/navatejkolluru"
+target="_blank">
+
+linkedin.com/in/navatejkolluru
+
+</a>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>GitHub</h3>
+
+<a href="https://github.com/navatejkolluru-spec"
+target="_blank">
+
+github.com/navatejkolluru-spec
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Kolluru Navatej. All Rights Reserved.
+</p>
+
+<p>
+Built with HTML & CSS • Computer Science Engineering
+</p>
+
+</footer>
+
+
+</body>
+</html>
+```
